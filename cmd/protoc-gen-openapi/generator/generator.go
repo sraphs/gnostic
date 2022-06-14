@@ -694,7 +694,7 @@ func (g *OpenAPIv3Generator) addPathsToDocumentV3(d *v3.Document, services []*pr
 				// Merge any `Operation` annotations with the current
 				extOperation := proto.GetExtension(method.Desc.Options(), v3.E_Operation)
 				if extOperation != nil {
-					proto.Merge(op, extOperation.(*v3.Operation))
+					proto.Merge(op, extOperation.(*v3.Operation), proto.WithOverride)
 				}
 
 				g.addOperationToDocumentV3(d, op, path2, methodName)

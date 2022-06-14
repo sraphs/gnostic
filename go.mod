@@ -8,9 +8,11 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/stoewer/go-strcase v1.2.0
-	golang.org/x/tools v0.0.0-20190524140312-2c0ae7006135
+	golang.org/x/tools v0.0.0-20200103221440-774c71fcf114
 	google.golang.org/genproto v0.0.0-20220107163113-42d7afdf6368
 	google.golang.org/protobuf v1.27.1
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15
-	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
+	gopkg.in/yaml.v3 v3.0.1
 )
+
+replace google.golang.org/protobuf => github.com/sraphs/protobuf-go v1.28.1-0.20220612185531-504c891051a1
