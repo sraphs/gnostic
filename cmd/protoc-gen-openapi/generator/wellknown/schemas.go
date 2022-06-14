@@ -94,6 +94,13 @@ func NewGoogleProtobufTimestampSchema() *v3.SchemaOrReference {
 			Schema: &v3.Schema{Type: "string", Format: "date-time"}}}
 }
 
+// google.protobuf.Duration is serialized as a string
+func NewGoogleProtobufDurationSchema() *v3.SchemaOrReference {
+	return &v3.SchemaOrReference{
+		Oneof: &v3.SchemaOrReference_Schema{
+			Schema: &v3.Schema{Type: "string", Format: "string"}}}
+}
+
 // google.type.Date is serialized as a string
 func NewGoogleTypeDateSchema() *v3.SchemaOrReference {
 	return &v3.SchemaOrReference{
